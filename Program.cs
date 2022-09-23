@@ -44,7 +44,7 @@ public class Program
             Write("Enter valid telegram bot token: ");
             var result = Console.ReadLine();
             token = result;
-        }   
+        }
 
         File.WriteAllText(tokenFilePath, token);
     }
