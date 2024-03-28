@@ -24,12 +24,6 @@ jobs:
       
     - name: Restore NuGet Packages
       run: nuget restore "Telegram Id Bot.sln"
-      
-    - name: Restore Packages AppMain
-      id: restoreAppMain
-      run: nuget restore AppMain.sln
-      env:
-        nuget-version: 6.x
 
     - name: Build Dll
       run: msbuild "Telegram Id Bot.sln" /p:Configuration=Release /p:Platform="AnyCPU"
